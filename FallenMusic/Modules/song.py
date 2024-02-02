@@ -58,13 +58,13 @@ async def song(_, message: Message):
             f"فشل إحضار المسار من ʏᴛ-ᴅʟ.\n\n**السبب :** `{ex}`"
         )
 
-    await m.edit_text("⎊ جارٍ التحميل انتظر,\n\n⎊ بواسطه ‌SPIDER..")
+    await m.edit_text("⎊ جارٍ التحميل انتظر,\n\n⎊ بواسطه ‌𝙰𝙻𝙴𝚇𝙴𝚂..")
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"‌‌‏‌‌‏≪⊶⌯━‌‌‏♢ ⦓ ᥉᥆υᖇᥴᥱ ᥉ρᎥժᥱᖇ ⦔ ♢━‌‌‏⌯⊷≫\n⎊ **العنوان :** [{title[:23]}]({link})\n⎊ **المده :** `{duration}`\n⎊ ** بواسطة :** {BOT_MENTION}\n‌‌‏‌‌‏≪⊶⌯━‌‌‏♢ ⦓ ᥉᥆υᖇᥴᥱ ᥉ρᎥժᥱᖇ ⦔ ♢━‌‌‏⌯⊷≫"
+        rep = f"‌‌‏‌‌‏✶ ✗ ~  𝚂𝙾𝚄𝚁𝙲𝙴 𝙰𝙻𝙴𝚇𝙴𝚂  ~ ✗ ✶\n⎊ **العنوان :** [{title[:23]}]({link})\n⎊ **المده :** `{duration}`\n⎊ ** بواسطة :** {BOT_MENTION}\n‌‌✶ ✗ ~  𝚂𝙾𝚄𝚁𝙲𝙴 𝙰𝙻𝙴𝚇𝙴𝚂  ~ ✗ ✶"
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(dur_arr[i]) * secmul
