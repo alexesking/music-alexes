@@ -143,7 +143,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"⎊ فشل التشغيل بسبب ان السوره طويلة {DURATION_LIMIT} شغل سوره تانية {BOT_NAME}."
+                f"⎊ فشل التشغيل بسبب ان ٲلٲغنيه طويلة {DURATION_LIMIT} شغل ٲغنيه تانية {BOT_NAME}."
             )
 
         file_name = get_file_name(audio)
@@ -172,7 +172,7 @@ async def play(_, message: Message):
 
         if (dur / 60) > DURATION_LIMIT:
             return await fallen.edit_text(
-                f"⎊ فشل التشغيل بسبب ان السوره طويلة {DURATION_LIMIT} شغل سوره تانية {BOT_NAME}.."
+                f"⎊ فشل التشغيل بسبب ان ٲلٲغنيه طويلة {DURATION_LIMIT} شغل ٲغنيه تانية {BOT_NAME}.."
             )
         file_path = audio_dl(url)
     else:
@@ -250,7 +250,7 @@ async def play(_, message: Message):
         await add_active_chat(message.chat.id)
         await message.reply_photo(
             photo=imgt,
-            caption=f"‌‌‏‌‌‏‌‌‏≪⊶⌯━‌‌‏♢ ⦓ ᥉᥆υᖇᥴᥱ ᥉ρᎥժᥱᖇ ⦔ ♢━‌‌‏⌯⊷≫\n**⎊ تـم الـتـشـغـيـل ✅**\n\n⎊ **العنوان :** [{title[:27]}](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n⎊ **المده :** `{duration}` دقيقه\n⎊ **بواسطه :** {ruser}\n‌‌‏‌‌‏‌‌‏≪⊶⌯━‌‌‏♢ ⦓ ᥉᥆υᖇᥴᥱ ᥉ρᎥժᥱᖇ ⦔ ♢━‌‌‏⌯⊷≫",
+            caption=f"‌‌✶ ✗ ~  𝚂𝙾𝚄𝚁𝙲𝙴 𝙰𝙻𝙴𝚇𝙴𝚂  ~ ✗ ✶\n**⎊ تـم الـتـشـغـيـل ✅**\n\n⎊ **العنوان :** [{title[:27]}](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n⎊ **المده :** `{duration}` دقيقه\n⎊ **بواسطه :** {ruser}\n‌‌‏‌‌‏‌‌‏✶ ✗ ~  𝚂𝙾𝚄𝚁𝙲𝙴 𝙰𝙻𝙴𝚇𝙴𝚂  ~ ✗ ✶",
             reply_markup=buttons,
         )
 
